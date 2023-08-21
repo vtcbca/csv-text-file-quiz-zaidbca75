@@ -1,0 +1,31 @@
+bca_info = """
+BCA (Bachelor of Computer Applications) Course Information:
+
+BCA is an undergraduate degree program in the field of computer applications. It is a popular choice for students who are interested in the world of computers and programming. The course covers subjects like programming languages, data structures, algorithms, software development, and more. BCA graduates can pursue careers in software development, web development, database management, and other related fields.
+
+Duration: 3 years
+Eligibility: 10+2 with Mathematics
+
+For more information, visit: www.example.com/bca
+"""
+
+with open("BCA.txt", "w") as bca_file:
+    bca_file.write(bca_info)
+
+# Count and print the total number of lines starting with 'A', 'B', and 'C' in intro.txt
+with open("intro.txt", "r") as intro_file:
+    lines = intro_file.readlines()
+
+count_a = count_b = count_c = 0
+
+for line in lines:
+    if line.startswith('A'):
+        count_a += 1
+    elif line.startswith('B'):
+        count_b += 1
+    elif line.startswith('C'):
+        count_c += 1
+
+print("Total number of lines starting with 'A':", count_a)
+print("Total number of lines starting with 'B':", count_b)
+print("Total number of lines starting with 'C':", count_c)
